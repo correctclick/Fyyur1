@@ -6,12 +6,15 @@
 	<ul class="items">
 		{% for venue in area.venues %}
 		<li>
-			<a href="/venues/{{ venue.id }}">
-				<i class="fas fa-music"></i>
-				<div class="item">
-					<h5>{{ venue.name }}</h5>
-				</div>
-			</a>
+			<div class="item">
+				<h5>
+					<a href="/venues/{{ venue.id }}">
+						<i class="fas fa-music"></i>
+						{{ venue.name }}
+					</a>
+					Upcoming Shows: {{ venue.num_upcoming_shows }}
+				</h5>
+			</div>
 		</li>
 		{% endfor %}
 	</ul>

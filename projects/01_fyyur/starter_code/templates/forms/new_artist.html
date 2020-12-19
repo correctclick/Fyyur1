@@ -6,7 +6,7 @@
       <h3 class="form-heading">List a new artist</h3>
       <div class="form-group">
         <label for="name">Name</label>
-        {{ form.name(class_ = 'form-control', autofocus = true) }}
+        {{ form.name(class_ = 'form-control', placeholder="Full Name", autofocus = true) }}
       </div>
       <div class="form-group">
           <label>City & State</label>
@@ -26,13 +26,29 @@
       <div class="form-group">
         <label for="genres">Genres</label>
         <small>Ctrl+Click to select multiple</small>
-        {{ form.genres(class_ = 'form-control', placeholder='Genres, separated by commas', id=form.state, autofocus = true) }}
+        {{ form.genres(class_ = 'form-control', autofocus = true) }}
       </div>
       <div class="form-group">
-          <label for="genres">Facebook Link</label>
-          {{ form.facebook_link(class_ = 'form-control', placeholder='http://', id=form.state, autofocus = true) }}
-        </div>
-      <input type="submit" value="Create Venue" class="btn btn-primary btn-lg btn-block">
+        <label for="image_link">Image Link</label>
+        {{ form.image_link(class_ = 'form-control', placeholder='http://',  autofocus = true) }}
+    </div>
+      <div class="form-group">
+          <label for="facebook_link">Facebook Link</label>
+          {{ form.facebook_link(class_ = 'form-control', placeholder='http://',  autofocus = true) }}
+      </div>
+      <div class="form-group">
+        <label for="website">website</label>
+        {{ form.website(class_ = 'form-control', placeholder='http://',  autofocus = true) }}
+      </div>
+      <div class="form-group">
+        <label for="seeking_venue">Seeking Venue</label>
+        {{ form.seeking_venue(class_ = 'form-check-input',  type='checkbox', checked = '', autofocus = true) }}
+      </div>
+      <div class="form-group">
+        <label for="seeking_description">Seeking Description</label>
+        {{ form.seeking_description(class_ = 'form-control',  autofocus = true) }}
+      </div>
+      <input type="submit" value="Create Artist" class="btn btn-primary btn-lg btn-block">
     </form>
   </div>
 {% endblock %}
